@@ -12,57 +12,51 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-white size-full border flex flex-col">
-      <nav className="basis-1/12 flex items-center">
-        <div className="justify-start ml-10 ">
-          <Image src={"/images/logo.png"} alt="logo" width={48} height={48} />
+    <div className="bg-gradient-to-r from-blue-400 to-indigo-600 min-h-screen flex flex-col text-white">
+      {/* Navigation */}
+      <nav className="flex items-center justify-between p-6">
+        <div className="ml-10">
+          {/* <Image src="/images/logo.png" alt="logo" width={48} height={48} /> */}
+          <h1 className="text-xl font-bold text-white">Chat App</h1>
         </div>
-        <div className="ml-auto mr-10">
-          <ul className="flex flex-row space-x-4">
-            <li>
-              <a
-                href="#"
-                className="font-bold hover:underline hover:cursor-pointer"
-              >
-                Features
-              </a>
-            </li>
-            <li>
-              <a className="font-bold hover:underline hover:cursor-pointer">
-                Desktop app
-              </a>
-            </li>
-            <li>
-              <a className="font-bold hover:underline hover:cursor-pointer ">
-                Privacy and safety
-              </a>
-            </li>
-            <li>
-              <a className="font-bold hover:underline hover:cursor-pointer">
-                For developers
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul className="flex space-x-6">
+          <li>
+            <a href="#" className="hover:underline">Features</a>
+          </li>
+          <li>
+            <a href="#" className="hover:underline">Desktop App</a>
+          </li>
+          <li>
+            <a href="#" className="hover:underline">Privacy & Safety</a>
+          </li>
+          <li>
+            <a href="#" className="hover:underline">For Developers</a>
+          </li>
+        </ul>
       </nav>
-      <div className="basis-11/12 flex flex-row">
-        <div className="basis-1/2 flex flex-col justify-center items-center">
-          <h1 className="my-20 text-2xl font-bold text-blue-500">
-            Let's Start !
-          </h1>
-          <div
+
+      {/* Main Section */}
+      <div className="flex flex-1 items-center justify-center px-10">
+        {/* Text Content */}
+        <div className="max-w-lg text-center md:text-left">
+          <h1 className="text-4xl font-bold leading-tight mb-4">Connect Instantly, Chat Effortlessly</h1>
+          <p className="text-lg text-gray-200 mb-6">Experience seamless communication with our modern chat platform. Join now and stay connected with friends and colleagues.</p>
+          <button
             onClick={handleClick}
-            className="rounded-full w-60 h-20 bg-blue-500 hover:bg-blue-600 hover:cursor-pointer active:bg-blue-700 flex items-center justify-center"
+            className="mt-4 px-6 py-3 bg-white text-blue-600 font-bold rounded-full shadow-lg hover:bg-gray-200 transition"
           >
-            <h1 className="text-2xl font-bold text-white">Sign In</h1>
-          </div>
+            Get Started
+          </button>
         </div>
-        <div className="basis-1/2  flex justify-center items-center">
+
+        {/* Image Section */}
+        <div className="hidden md:block">
           <Image
             width={500}
             height={500}
-            src={"/images/landing_img.png"}
-            alt="landing img"
+            src="/images/landing_img.png"
+            alt="Chatting Illustration"
+            className="rounded-lg shadow-lg"
           />
         </div>
       </div>

@@ -1,10 +1,10 @@
 {
   "/_not-found": "app/_not-found.js",
-  "/admin/page": "app/admin/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/auth/page": "app/auth/page.js",
   "/page": "app/page.js",
-  "/profile/page": "app/profile/page.js",
+  "/auth/page": "app/auth/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/admin/page": "app/admin/page.js",
   "/social/page": "app/social/page.js",
+  "/profile/page": "app/profile/page.js",
   "/home/page": "app/home/page.js"
 }

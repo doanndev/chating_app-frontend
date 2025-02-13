@@ -1,4 +1,4 @@
-// File: D:\ktpm2\MessageLaravel\frontend\src\app\social\page.tsx
+// File: C:\Users\Asus\Desktop\chating_app-frontend\src\app\social\page.tsx
 import * as entry from '../../../../src/app/social/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

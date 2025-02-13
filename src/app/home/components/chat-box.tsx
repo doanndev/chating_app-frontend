@@ -1,4 +1,4 @@
-import { faAdd, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faAdd, faPlus, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
@@ -226,8 +226,8 @@ export default function ChatBox(props: any) {
 					)
 			}
 
-			<button className="fixed left-56 bottom-4 transform -translate-x-1/2 bg-blue-500 text-white rounded-full p-4 text-lg cursor-pointer size-16 shadow-2xl active:bg-blue-700 hover:bg-blue-600 ">
-				<FontAwesomeIcon icon={faAdd} />
+			<button className="fixed bottom-6 left-12 bg-green-600 text-white rounded-full py-4 px-5 text-lg shadow-lg">
+				<FontAwesomeIcon icon={faPlus} />
 			</button>
 		</div>
 	);

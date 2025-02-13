@@ -8,77 +8,37 @@ import "../globals.css";
 export default function Auth() {
   const [isLogin, setIsLogin] = useState(true);
 
-  const handleSwitchAuh = () => {
+  const handleSwitchAuth = () => {
     setIsLogin(!isLogin);
   };
 
   return (
-    <main className="relative min-h-screen w-full bg-white">
-      {/* component */}
-      <div className="p-6" x-data="app">
-        {/* header */}
-        <header className="flex w-full justify-between">
-          {/* buttons */}
-          <div className="absolute right-10">
-            {isLogin ? (
-              <button
-                onClick={handleSwitchAuh}
-                type="button"
-                x-show="isLoginPage"
-                className="rounded-2xl border-b-2 border-b-gray-300 bg-white py-3 px-4 font-bold text-blue-500 ring-2 ring-gray-300 hover:bg-gray-200 active:translate-y-[0.125rem] active:border-b-gray-200"
-              >
-                LOGIN
-              </button>
-            ) : (
-              <button
-                onClick={handleSwitchAuh}
-                type="button"
-                x-show="!isLoginPage"
-                className="rounded-2xl border-b-2 border-b-gray-300 bg-white py-3 px-4 font-bold text-blue-500 ring-2 ring-gray-300 hover:bg-gray-200 active:translate-y-[0.125rem] active:border-b-gray-200"
-              >
-                SIGN UP
-              </button>
-            )}
-          </div>
-        </header>
-        <section className="absolute top-1/2 left-1/2 mx-auto max-w-sm -translate-x-1/2 -translate-y-1/2 transform space-y-4 text-center">
-          {/* register content */}
-          {/* login content */}
-          {isLogin ? <Login /> : <Register />}
+    <main className="text-black flex min-h-screen items-center justify-center flex-col bg-gray-100 p-6">
+      <h1 className="text-3xl font-bold mb-4 text-blue-500">Chat App</h1>
+      {/* Chat App UI Container */}
+      <div className="w-full max-w-md rounded-xl bg-white p-6 shadow-lg">
+        {/* Header */}
+        <div className="flex items-center justify-between border-b pb-4">
+          <h2 className="text-lg font-semibold text-gray-700">{isLogin ? "Welcome back!" : "Join us!"}</h2>
+          <button
+            onClick={handleSwitchAuth}
+            className="rounded-full bg-blue-500 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-600"
+          >
+            {isLogin ? "SIGN UP" : "LOGIN"}
+          </button>
+        </div>
 
-          <div className="flex items-center space-x-4">
-            <hr className="w-full border border-gray-300" />
-            <div className="font-semibold text-gray-400">OR</div>
-            <hr className="w-full border border-gray-300" />
+        {/* Chat Bubble Container */}
+        <div className="mt-4 space-y-4 h-auto overflow-y-auto p-2 border rounded-md bg-gray-50">
+          <div className="flex justify-start">
+            <div className="rounded-lg bg-blue-400 p-3 max-w-xs">Hello! How can I help you?</div>
           </div>
-          <footer>
-            <div className="grid grid-cols-2 gap-4">
-              <a
-                href="#"
-                className="rounded-2xl border-b-2 border-b-gray-300 bg-white py-2.5 px-4 font-bold text-blue-700 ring-2 ring-gray-300 hover:bg-gray-200 active:translate-y-[0.125rem] active:border-b-gray-200"
-              >
-                FACEBOOK
-              </a>
-              <a
-                href="#"
-                className="rounded-2xl border-b-2 border-b-gray-300 bg-white py-2.5 px-4 font-bold text-blue-500 ring-2 ring-gray-300 hover:bg-gray-200 active:translate-y-[0.125rem] active:border-b-gray-200"
-              >
-                GOOGLE
-              </a>
-            </div>
-            <div className="mt-8 text-sm text-gray-400">
-              By signing in to ********, you agree to our
-              <a href="#" className="font-medium text-gray-500">
-                Terms
-              </a>{" "}
-              and
-              <a href="#" className="font-medium text-gray-500">
-                Privacy Policy
-              </a>
-              .
-            </div>
-          </footer>
-        </section>
+          <div className="flex justify-end">
+            <div className="rounded-lg bg-green-300 p-3 max-w-xs">Hi! I need some assistance.</div>
+          </div>
+        </div>
+        {/* Auth Content */}
+        <div className="mt-4">{isLogin ? <Login /> : <Register />}</div>
       </div>
     </main>
   );
