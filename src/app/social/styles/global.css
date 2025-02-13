@@ -1,0 +1,15 @@
+:export {
+    bodyColor: #efefef;
+    navColor: #1876f2;
+    bgColor: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #efefef;
+    transition: background 0.3s;
+    /* display: none !important;; */
+    height: 100vh;
+    width: 100%;
+}
